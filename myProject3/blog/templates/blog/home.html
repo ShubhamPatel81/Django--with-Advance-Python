@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templet Basic</title>
+  </head>
+  <body>
+    <!-- 1st comment which is visible in the browser -->
+    {%comment %} 2nd comment which is visible in the browser {% endcomment %} {#
+    3rd comment which is also not visible in the browser #}
+    <h1>Template Basic</h1>
+
+    <h3>Welcome to the home page!</h3>
+
+    <h5>Name : {{name}}</h5>
+    <h5>Age : {{age}}</h5>
+    <p>List Access :</p>
+    <p>Skills are : {{skill}}</p>
+    <p>First Skill : {{skill.0}}</p>
+    <p>Object Attributes</p>
+    <p>User Name : {{user.name}}</p>
+    <p>User Age : {{user.age}}</p>
+    <h5>Dictionary Access</h5>
+    <h6>Blog Information : {{blog.title}}</h6>
+    <h6>Blog Time : {{blog.created_at}}</h6>
+    <h3>Default Values : {{default_value | default:"No value provided"}}</h3>
+    <h3>Default Values : {{default_value | default_if_none:"No data"}}</h3>
+  </body>
+</html>
